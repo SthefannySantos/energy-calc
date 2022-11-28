@@ -1,0 +1,17 @@
+body{
+    background-color: darkgrey;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-container{
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    margin-top: 8%;
+    background-color: rgba(220, 220, 220, 0.74);
+    text-align: center;
+    border: 2px, black ;
+    border-radius: 10px;
+
+}
