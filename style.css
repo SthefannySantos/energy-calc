@@ -1,5 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Inter", sans-serif;
+}
+
 body{
-    background-color: darkgrey;
+    background-color: #FFF
+}
+
+
+
+/* body{
+  /*   background-color: darkgrey;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -18,5 +32,10 @@ body{
 .inp-quest{
     border-radius: 9px;
     border: 0.2px, grey;
-    background-color: rgba(231, 223, 223, 0.192);
+    background-color: rgb(255, 254, 254);
+    width: 75%;
+} */
+
+.hidden {
+    display: none;
 }
