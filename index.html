@@ -13,24 +13,25 @@
 </head>
 
 <body>
-    <div class="main-container">
-        <h1>Energy calculator</h1>
+    <h1>Energy calculator</h1>
+    <div class="main-container" id="main-container">
+
         <form action="" id="form" class="form">
             <label for="nome">Nome do produto:</label>
-            <input type="text" id="product-name" class="inp-quest">
+            <input type="text" id="product-name">
             <label for="power">Consume energético do produto</label>
-            <input type="number" id="product-consume" class="inp-quest">
+            <input type="number" id="product-consume">
             <label for="time">Quantas horas de uso?</label>
-            <input type="number" id="time-usage" class="inp-quest">
+            <input type="number" id="time-usage">
             <label for="days">Quantos dias, durante o mês você usa?</label>
-            <input type="number" id="days-usage" class="inp-quest">
+            <input type="number" id="days-usage">
             <label for="energy-cost">Quantos você paga em na sua energia (Kw/h)</label>
-            <input type="number" id="tax-energy" class="inp-quest">
+            <input type="number" id="tax-energy">
         </form>
-        <button id="send-data">Submit</button>
+        <button id="send-data">Enviar</button>
     </div>
     <div class="result hidden" id="result">
-        <p>Resultado</p>
+        <h2>Resultado</h2>
         <h1 id="result-product"></h1>
         <h2 id="result-value"></h2>
     </div>
@@ -43,8 +44,6 @@
             return parseFloat(dado.replace(',', '.'));
         }
 
-        // TODO: replace para numero
-
         function pegarDados() {
             let nameProduct = document.getElementById("product-name").value;
             let consume = document.getElementById("product-consume").value;
@@ -54,16 +53,16 @@
 
             let resultado = formatarDecimais(consume) * formatarDecimais(time) * formatarDecimais(days) * formatarDecimais(tax);
 
-            resultadoFormatado = resultado.toFixed(2);
+            resultado = resultado.toFixed(2);
+
+            let resultadoFormatado = 'R$ ' + resultado.toString()
 
             inserirDados(nameProduct, resultadoFormatado)
         }
         function inserirDados(product, value) {
-            let form = document.getElementById("form");
-            let sendBtn = document.getElementById("send-data");
+            let main = document.getElementById("main-container");
             let result = document.getElementById("result");
-            form.classList.add("hidden");
-            sendBtn.classList.add("hidden");
+            main.classList.add("hidden");
             result.classList.remove("hidden");
             document.getElementById("result-product").innerHTML = product;
             document.getElementById("result-value").innerHTML = value;
