@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon">
+    <title>EnergyCalc</title>
 </head>
 
 <body>
-    <h1>Energy calculator</h1>
     <div class="main-container" id="main-container">
-
+        <img src="src/logo.png" class='logo' alt="" srcset="">
         <form action="" id="form" class="form">
             <label for="nome">Nome do produto:</label>
             <input type="text" id="product-name">
@@ -31,13 +31,18 @@
         <button id="send-data">Enviar</button>
     </div>
     <div class="result hidden" id="result">
-        <h2>Resultado</h2>
-        <h1 id="result-product"></h1>
-        <h2 id="result-value"></h2>
+        <img src="src/logo.png" class='logo' alt="" srcset="">
+        <h2 id="result-product"></h2>
+        <h1 id="result-value"></h1>
+        <button id="nova-consulta">Consultar novo produto</button>
     </div>
     <script>
         document.getElementById("send-data").addEventListener("click", () => {
             pegarDados();
+        })
+
+        document.getElementById("nova-consulta").addEventListener("click", () => {
+            location.reload()
         })
 
         function formatarDecimais(dado) {
@@ -57,7 +62,9 @@
 
             let resultadoFormatado = 'R$ ' + resultado.toString()
 
-            inserirDados(nameProduct, resultadoFormatado)
+            let nomeResposta = `O gasto do(a) ${nameProduct} foi de aproximadamente..`;
+
+            inserirDados(nomeResposta, resultadoFormatado)
         }
         function inserirDados(product, value) {
             let main = document.getElementById("main-container");

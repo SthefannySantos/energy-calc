@@ -12,6 +12,12 @@ body{
     font-size: 1em;
 }
 
+.logo{
+    width: 15%;
+    justify-self: center;
+    padding: 5px 0px;
+}
+
 .main-container{
     margin: 25px;
     padding: 15px 8px;
@@ -41,7 +47,7 @@ body{
     color: #176c2b;
 }
 
-.main-container button {
+button {
     margin-top: 20px;
     border-radius: 6px;
     border: none;
@@ -55,7 +61,7 @@ body{
     font-size: 1.1em;
 }
 
-.main-container button:hover {
+button:hover {
     color: #176c2b;
     border: #176c2b solid 2px;
     background: #fff;
@@ -65,7 +71,7 @@ body{
 
 .result{
     margin: 25px;
-    padding: 15px 8px;
+    padding: 15px 10px;
     background-color: #f6f4f4;
     border: #176c2b solid 1.5px;
     border-radius: 25px;
