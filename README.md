@@ -54,4 +54,4 @@ O sistema irá calcular e exibir o consumo mensal da geladeira, fornecendo o val
 
 ---
 
-Esse `README.md` fornece uma visão clara do propósito e funcionamento da aplicação, além de instruções sobre como utilizá-la.
+Isso é um projeto simples de fim acadêmico. Esse `README.md` fornece uma visão clara do propósito e funcionamento da aplicação, além de instruções sobre como utilizá-la.
